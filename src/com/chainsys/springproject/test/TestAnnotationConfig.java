@@ -7,6 +7,7 @@ import org.springframework.context.support.ClassPathXmlApplicationContext;
 import com.chainsys.springproject.appconfig.AppConfig;
 import com.chainsys.springproject.beans.Customer;
 import com.chainsys.springproject.beans.Employee;
+import com.chainsys.springproject.component.MobilePhone;
 
 public class TestAnnotationConfig {
 	public static void testA() {
@@ -25,5 +26,13 @@ public class TestAnnotationConfig {
 		c.setName("samOnly");
 		c.print();
 		
+	}
+	public static void testPhone() {
+		AnnotationConfigApplicationContext ac= new AnnotationConfigApplicationContext();
+		ac.scan("com.chainsys.springproject.component");
+		ac.refresh();
+		MobilePhone phone = ac.getBean(MobilePhone.class);
+		phone.setPhoneNumber(1234567890l);
+		System.out.println("phone Number" + phone.getPhoneNumber());
 	}
 }
