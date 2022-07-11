@@ -1,8 +1,8 @@
 package com.chainsys.springproject.beans;
 
-public class Appointments {
+public class Appointment {
 	public String personName;
-	Appointments(){
+	Appointment(){
 		System.out.println("Appointments object Created ");
 	}
 }

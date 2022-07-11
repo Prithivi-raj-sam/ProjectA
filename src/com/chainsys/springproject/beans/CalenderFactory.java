@@ -8,7 +8,7 @@ public class CalenderFactory {
 		// the Calender constructor is default access modifier so, can be create here
 		return new Calender();
 	}
-	public Appointments createAppointments() {
-		return new Appointments();
+	public Appointment createAppointments() {
+		return new Appointment();
 	}
 }
